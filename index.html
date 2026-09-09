@@ -1,7 +1,60 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>안녕하세요, 제 홈페이지입니다</h1>
-<p>GitHub Pages로 만들었습니다!</p>
-</body>
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="본인 이름의 개인 홈페이지입니다. 소개, 관심사, 연락처를 확인할 수 있습니다." />
+    <title>본인 이름 | 개인 홈페이지</title>
+    <style>
+      :root { --ink: #172033; --muted: #5d6a7f; --accent: #2563eb; --accent-soft: #eaf1ff; --surface: #fff; --line: #dce3ef; --background: #f6f8fc; }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; color: var(--ink); background: var(--background); font-family: "Pretendard", "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.7; }
+      a { color: inherit; }
+      .wrap { width: min(100% - 2rem, 960px); margin: 0 auto; }
+      header { padding: 1.25rem 0; border-bottom: 1px solid var(--line); background: rgba(255, 255, 255, 0.92); }
+      nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+      .brand { font-weight: 800; text-decoration: none; }
+      .menu { display: flex; gap: 1rem; }
+      .menu a { color: var(--muted); font-size: 0.95rem; font-weight: 600; text-decoration: none; }
+      .menu a:hover, .menu a:focus-visible { color: var(--accent); }
+      main { padding: 4.5rem 0 3rem; }
+      .hero { padding: 3rem; border-radius: 1.5rem; background: linear-gradient(135deg, #fff 0%, #edf4ff 100%); box-shadow: 0 18px 45px rgba(39, 70, 120, 0.09); }
+      .eyebrow { margin: 0 0 0.75rem; color: var(--accent); font-size: 0.9rem; font-weight: 800; letter-spacing: 0.06em; }
+      h1, h2 { line-height: 1.25; }
+      h1 { margin: 0; font-size: clamp(2.2rem, 7vw, 4.4rem); letter-spacing: -0.05em; }
+      .intro { max-width: 38rem; margin: 1.25rem 0 0; color: var(--muted); font-size: clamp(1.05rem, 2.5vw, 1.25rem); }
+      .sections { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
+      section { padding: 1.75rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--surface); }
+      section:last-child { grid-column: 1 / -1; }
+      h2 { margin: 0 0 0.75rem; font-size: 1.35rem; }
+      p { margin: 0; }
+      .interest-list { display: flex; flex-wrap: wrap; gap: 0.6rem; padding: 0; margin: 0; list-style: none; }
+      .interest-list li { padding: 0.35rem 0.75rem; border-radius: 999px; background: var(--accent-soft); color: #1d4ed8; font-weight: 700; }
+      .contact-link { color: var(--accent); font-weight: 800; text-decoration-thickness: 2px; text-underline-offset: 0.2em; }
+      footer { padding: 1.75rem 0 2.5rem; color: var(--muted); font-size: 0.9rem; text-align: center; }
+      @media (max-width: 640px) { .wrap { width: min(100% - 1.25rem, 960px); } header { padding: 1rem 0; } .menu { gap: 0.75rem; font-size: 0.88rem; } main { padding-top: 2.5rem; } .hero { padding: 2rem 1.5rem; border-radius: 1rem; } .sections { grid-template-columns: 1fr; } section, section:last-child { grid-column: auto; padding: 1.5rem; } }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="wrap" aria-label="주요 메뉴">
+        <a class="brand" href="#top">본인 이름</a>
+        <div class="menu"><a href="#about">소개</a><a href="#interests">관심사</a><a href="#contact">연락처</a></div>
+      </nav>
+    </header>
+    <main id="top" class="wrap">
+      <article class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">PERSONAL WEBSITE</p>
+        <h1 id="page-title">안녕하세요,<br />본인 이름입니다.</h1>
+        <p class="intro">여기에 나를 짧게 소개하는 문장을 적어 보세요.<br />어떤 일을 좋아하고, 무엇을 배우고 있는지 자유롭게 소개할 수 있습니다.</p>
+      </article>
+      <div class="sections">
+        <section id="about" aria-labelledby="about-title"><h2 id="about-title">소개</h2><p>새로운 것을 배우고 기록하는 것을 좋아합니다. 이곳에 나의 이야기와 작은 작업들을 차근차근 담아갈 예정입니다.</p></section>
+        <section id="interests" aria-labelledby="interests-title"><h2 id="interests-title">관심사</h2><ul class="interest-list"><li>웹 만들기</li><li>디자인</li><li>배움과 기록</li></ul></section>
+        <section id="contact" aria-labelledby="contact-title"><h2 id="contact-title">연락처</h2><p>이메일: <a class="contact-link" href="mailto:your-email@example.com">your-email@example.com</a></p></section>
+      </div>
+    </main>
+    <footer class="wrap">© 2026 본인 이름. All rights reserved.</footer>
+  </body>
 </html>
